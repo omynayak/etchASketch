@@ -15,6 +15,11 @@ for(let value = 0; value < (dimension*dimension); value++){
     // Now that we have the div created we want to try and give it the appropriate default size 
     let size = MAMA_SIZE / dimension
     tempDiv.setAttribute("style",`height:${size}px; width: ${size}px; background-color: white;`)
+
+    // Attaching the eventListener to each div before appending it to the mama div
+    tempDiv.addEventListener("mouseover", () => {
+            tempDiv.style.backgroundColor = randomRGB()
+        })
     mamaDiv.appendChild(tempDiv)
 }
 
@@ -37,6 +42,9 @@ function requestNewDimensions(){
     // I will now run the script and see if it works
     // The prompt did not appear for some reason
     // The issue was that the html file had "dimButton" as the button's ID
+
+    // Calling the generateGrid() function to make the grid now that we have the value of newDimensions
+    generateGrid()
 }
 
 // So far we've done all the easy work. Now our tasks are the following: 
@@ -89,8 +97,8 @@ function randomRGB(){
 The path ahead is super clear to me:
 
 Next commit:
-1. Add call to the generateGrid function in the requestNewDimensions function
-2. Add the event listener and random rgb generator in the opening loop
+1. Add call to the generateGrid function in the requestNewDimensions function ✅
+2. Add the event listener and random rgb generator in the opening loop ✅
 This makes the program fully functioning
 
 (Next + 1) commit:

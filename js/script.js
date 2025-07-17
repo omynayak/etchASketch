@@ -14,6 +14,10 @@ const MAMA_SIZE = 960;
 // DOM element references
 const mamaDiv = document.getElementById("mama-div");
 const button = document.getElementById("dimBut");
+const clear = document.getElementById("clearBut")
+
+// Clear button functionality
+clear.addEventListener("click",generateGrid)
 
 // Default grid dimension
 let dimension = 16;

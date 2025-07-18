@@ -37,7 +37,9 @@ function generateGrid() {
         babyDiv.addEventListener("mouseover", () => {
             babyDiv.style.backgroundColor = randomRGB();
         });
-
+        babyDiv.addEventListener("click", () => {
+            babyDiv.style.backgroundColor = "white";
+        });
         mamaDiv.appendChild(babyDiv);
     }
 }

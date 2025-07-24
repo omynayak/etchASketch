@@ -60,8 +60,8 @@ function randomRGB() {
  */
 function requestNewDimensions() {
     do {
-        dimension = Number(prompt("Enter new dimensions (between 1 and 25):"));
-    } while (dimension <= 0 || dimension > 25 || isNaN(dimension));
+        dimension = Number(prompt("Enter new dimensions (between 1 and 100):"));
+    } while (dimension <= 0 || dimension > 100 || isNaN(dimension));
 
     generateGrid();
 }
